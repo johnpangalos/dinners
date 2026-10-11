@@ -15,16 +15,18 @@ Text fields support two bits of markup: `**bold**`, and `[[baseId|text]]`, which
 
 ## Develop
 
+This project uses [bun](https://bun.sh) as its package manager.
+
 ```sh
-npm install
-npm run dev        # local dev server, running in the Workers runtime
-npm run typecheck
+bun install
+bun run dev        # local dev server, running in the Workers runtime
+bun run typecheck
 ```
 
 ## Deploy to Cloudflare
 
 ```sh
-npm run deploy
+bun run deploy
 ```
 
-Or connect this repo in the Cloudflare dashboard (Workers & Pages → Create → Import a repository) with the build command `npm run build` and the deploy command `npx wrangler deploy`.
+Or connect this repo in the Cloudflare dashboard (Workers & Pages → Create → Import a repository). Workers Builds sees `bun.lock` and installs with bun. Set the build command to `bun run build`; the deploy commands (`npx wrangler deploy`, and `npx wrangler preview` for branches) can stay as they are.
