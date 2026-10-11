@@ -1,5 +1,8 @@
 {
+  "$schema": "node_modules/wrangler/config-schema.json",
   "name": "dinners",
   "compatibility_date": "2026-09-01",
-  "assets": { "directory": "./public" }
+  "compatibility_flags": ["nodejs_compat"],
+  "main": "./workers/app.ts",
+  "observability": { "enabled": true }
 }
