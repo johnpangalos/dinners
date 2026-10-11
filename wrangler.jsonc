@@ -1,6 +1,7 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "dinners",
+  "account_id": "e5933c765c57d2f3a58d86973c88362c",
   "compatibility_date": "2026-09-01",
   "compatibility_flags": ["nodejs_compat"],
   "main": "./workers/app.ts",

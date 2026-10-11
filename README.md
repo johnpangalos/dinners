@@ -25,8 +25,15 @@ bun run typecheck
 
 ## Deploy to Cloudflare
 
+GitHub Actions builds and deploys the site (`.github/workflows/deploy.yml`), using the bun version pinned in `package.json`'s `packageManager` field:
+
+- Pushes to `main` deploy to production with `wrangler deploy`.
+- Pull requests get a preview deployment with `wrangler preview`.
+
+The workflow needs a `CLOUDFLARE_API_TOKEN` repository secret: a Cloudflare API token from the "Edit Cloudflare Workers" template. The account ID is set in `wrangler.jsonc`.
+
+To deploy by hand:
+
 ```sh
 bun run deploy
 ```
-
-Or connect this repo in the Cloudflare dashboard (Workers & Pages → Create → Import a repository). Workers Builds sees `bun.lock` and installs with bun. Set the build command to `bun run build`; the deploy commands (`npx wrangler deploy`, and `npx wrangler preview` for branches) can stay as they are.
