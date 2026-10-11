@@ -33,8 +33,7 @@
 }
 
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; scroll-padding-top: calc(env(safe-area-inset-top, 0px) + 64px); }
-@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+html { scroll-padding-top: calc(env(safe-area-inset-top, 0px) + 64px); }
 body {
   background: var(--bg); color: var(--ink);
   font-family: var(--font-body); font-size: 1.0625rem; line-height: 1.55;

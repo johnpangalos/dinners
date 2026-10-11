@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import {
   isRouteErrorResponse,
   Links,
@@ -46,7 +47,29 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
+  useSmoothAnchorScroll();
   return <Outlet />;
+}
+
+// Smooth-scroll only when an in-page link (the day strip, base tags) is
+// clicked. A global `scroll-behavior: smooth` would also animate the browser's
+// scroll restore on reload, so the page would glide down from the top.
+function useSmoothAnchorScroll() {
+  useEffect(() => {
+    const onClick = (e: MouseEvent) => {
+      if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+      const link = (e.target as Element).closest?.('a[href^="#"]');
+      const id = link?.getAttribute("href")?.slice(1);
+      const target = id && document.getElementById(id);
+      if (!target) return;
+      e.preventDefault();
+      const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      target.scrollIntoView({ behavior: reduce ? "auto" : "smooth" });
+      history.pushState(history.state, "", `#${id}`);
+    };
+    document.addEventListener("click", onClick);
+    return () => document.removeEventListener("click", onClick);
+  }, []);
 }
 
 export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
