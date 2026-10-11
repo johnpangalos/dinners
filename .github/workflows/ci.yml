@@ -1,0 +1,27 @@
+name: CI
+
+# Cloudflare Workers Builds deploys (previews for branches, production for
+# main). This workflow only checks that the app typechecks and builds.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version-file: package.json
+
+      - run: bun install --frozen-lockfile
+      - run: bun run typecheck
+      - run: bun run build
