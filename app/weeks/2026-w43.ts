@@ -4,36 +4,37 @@ export default {
   year: 2026,
   week: 43,
   dates: "Sunday 18 to Saturday 24 October",
-  lede: "A plant-based mince week built around Anamma. Vegofärs goes straight from the freezer into the pan, and formbar färs shapes into Friday's burgers once it has thawed. Every dinner has a vegan base for everyone, with add-ons for the family on the side. The coloured tags show where a Sunday base comes back later in the week.",
+  lede: "A plant-based mince week built on Anamma formbar vegofärs, used for every meal: a ragù, meatballs, burgers and taco filling. It shapes without egg or breadcrumbs, and it thaws a portion at a time. Every dinner has a vegan base for everyone, with add-ons for the family on the side. The coloured tags show where a Sunday base comes back later in the week.",
   reuseNote:
-    "Five bases made on Sunday and four ingredients bought once each show up on several nights. One 1 kg bag of vegofärs covers the ragù and Saturday's tacos, and one 850 g pack of formbar färs makes Friday's burgers plus a batch of meatballs for lunches. Half the vegokorv pack goes into Thursday's stroganoff. Tuesday is dinner at Mormor's.",
+    "Five bases made on Sunday and four ingredients bought once each show up on several nights. Two 850 g packs of formbar vegofärs cover the ragù, Thursday's meatballs, Friday's burgers and Saturday's tacos. Tuesday is dinner at Mormor's.",
 
   prep: {
     kicker: "Sunday 18 Oct · about 1 hour",
     intro:
       "Everything here is vegan. Do it on Sunday before the dumplings. Nothing here is used on Sunday itself, so everything goes straight into the fridge.",
     steps: [
+      "Take 450 g formbar färs out of the freezer and spread it on a plate to thaw, 30–60 min. Put the rest back.",
       "Chop all onions, carrots and garlic in one go (ragù and slaw).",
-      "Start the ragù with 500 g vegofärs straight from the freezer.",
+      "Start the ragù with the thawed färs.",
       "While it simmers, make the pressed cucumber and the pickled onion.",
       "Shred the cabbage and carrot for the slaw. Stir together the smoky mayo.",
       "Split the ragù into 2 containers.",
       "Cool everything quickly, then store as below. Then on to the dumplings.",
     ],
     storageNote:
-      "Cooked food keeps 3–4 days in the fridge, so the ragù is eaten by Wednesday. Anamma's frozen färs shouldn't be refrozen once thawed, so only take out what each night needs: vegofärs cooks from frozen, and Friday's formbar färs moves to the fridge on Thursday night.",
+      "Cooked food keeps 3–4 days in the fridge, so the ragù is eaten by Wednesday. Thawed färs shouldn't go back in the freezer, so each night's portion moves to the fridge the night before: 350 g on Wednesday night, 500 g on Thursday night and 400 g on Friday night.",
   },
 
   bases: [
     {
       id: "ragu",
-      name: "Vegofärs ragù",
+      name: "Färs ragù",
       color: "red",
       used: "Used **Mon** and **Wed**",
       ingredients:
-        "500 g Anamma vegofärs (frozen) · 2 yellow onions · 2 carrots · 3 garlic cloves · 2 tbsp olive oil · 2 tbsp tomato paste · 2 cans crushed tomatoes (400 g) · 1 vegetable stock cube · 1 dl water · 1 tsp dried oregano · 1 tbsp soy sauce · salt · pepper",
+        "450 g Anamma formbar vegofärs, thawed · 2 yellow onions · 2 carrots · 3 garlic cloves · 2 tbsp olive oil · 2 tbsp tomato paste · 2 cans crushed tomatoes (400 g) · 1 vegetable stock cube · 1 dl water · 1 tsp dried oregano · 1 tbsp soy sauce · salt · pepper",
       method:
-        "Soften the finely chopped onion, carrot and garlic in the oil, about 5 min. Add the vegofärs straight from the freezer and fry until it breaks up and browns, 5–7 min. Fry in the paste for a minute, then add tomatoes, stock cube, water, oregano and soy. Simmer 25 min and season. Split into 2 containers, both for the fridge.",
+        "Soften the finely chopped onion, carrot and garlic in the oil, about 5 min. Add the färs and fry, breaking it into small crumbs with the spoon, until browned, 5–7 min. Fry in the paste for a minute, then add tomatoes, stock cube, water, oregano and soy. Simmer 25 min and season. Split into 2 containers, both for the fridge.",
       uses: { mon: "½", wed: "½" },
       store: "Fridge, 2 containers",
       moveToFridge: "–",
@@ -111,13 +112,13 @@ export default {
       title: "Spaghetti bolognese with a side salad",
       meta: ["15 min", "Vegan for everyone except the cheese"],
       tags: [
-        { base: "ragu", label: "Vegofärs ragù · ½" },
+        { base: "ragu", label: "Färs ragù · ½" },
         { base: "onion", label: "Pickled onion" },
         { label: "Salad & tomatoes" },
         { label: "Family cheese" },
       ],
       everyone: [
-        "[[ragu|½ the vegofärs ragù]]",
+        "[[ragu|½ the färs ragù]]",
         "4 portions spaghetti",
         "Salad leaves, 150 g cherry tomatoes, olive oil, salt",
         "[[onion|Pickled onion]] on the salad",
@@ -141,10 +142,10 @@ export default {
     {
       key: "wed",
       kicker: "Wednesday 21 Oct",
-      title: "Vegofärs lasagne",
+      title: "Lasagne",
       meta: ["50 min, 15 hands-on", "Vegan béchamel, cheese on the family's side"],
       tags: [
-        { base: "ragu", label: "Vegofärs ragù · ½" },
+        { base: "ragu", label: "Färs ragù · ½" },
         { base: "onion", label: "Pickled onion" },
         { label: "Oat milk & cream" },
         { label: "Salad & tomatoes" },
@@ -159,6 +160,7 @@ export default {
       you: ["2 tbsp nutritional yeast and 2 tbsp breadcrumbs (or vegan grated cheese) on your corner"],
       family: ["1½ dl grated cheese (the shared cheese) on their side"],
       steps: [
+        "Move 350 g formbar färs from the freezer to the fridge for Thursday.",
         "Oven to 200°C. Warm the oil, stir in the flour, then whisk in the oat milk a little at a time. Simmer 3–4 min until thick and season with nutmeg and salt.",
         "Layer ragù, sheets and béchamel three times in a dish, ending with béchamel.",
         "Scatter nutritional yeast and breadcrumbs over one corner for you and cheese over the rest.",
@@ -168,28 +170,28 @@ export default {
     {
       key: "thu",
       kicker: "Thursday 22 Oct",
-      title: "Vegokorv stroganoff with rice",
-      meta: ["25 min", "Anamma vegokorv"],
+      title: "Meatball stroganoff with rice",
+      meta: ["30 min", "Anamma formbar vegofärs"],
       tags: [
         { base: "gurka", label: "Pressed cucumber" },
         { label: "Oat milk & cream" },
       ],
       everyone: [
-        "400 g Anamma vegokorv, about half the pack (the rest stays frozen)",
-        "1 yellow onion · 1 tbsp oil",
+        "350 g Anamma formbar vegofärs (to the fridge Wednesday night) · ½ tsp allspice · pepper",
+        "1 yellow onion · 2 tbsp oil",
         "2 tbsp tomato paste · 2½ dl oat cooking cream · 1 dl water · 1 tbsp Dijon mustard · 1 tsp soy sauce",
         "4 portions rice",
         "[[gurka|Pressed cucumber]] on the side",
         "Parsley, salt, pepper",
       ],
       family: [
-        { text: "Optional: 300 g falukorv in strips, in its own pan with a ladle of the sauce", sub: true },
+        { text: "Optional: 300 g beef meatballs, browned and simmered in a ladle of the sauce in their own pan", sub: true },
       ],
       steps: [
-        "Move Friday's formbar färs (the whole pack) from the freezer to the fridge.",
-        "Cook the rice. Let the vegokorv sit out 10 min, then cut into strips.",
-        "Fry the onion in the oil until soft. Add the korv and fry until it colours, 3–4 min.",
-        "Stir in the tomato paste, then the cream, water, mustard and soy. Simmer 5 min and season.",
+        "Move 500 g formbar färs from the freezer to the fridge for Friday's burgers.",
+        "Cook the rice. Mix the färs with allspice and pepper and roll about 20 small meatballs with oiled hands.",
+        "Fry the meatballs in 1 tbsp oil until browned all over, 5 min, and set aside. Fry the onion in the rest of the oil until soft.",
+        "Stir in the tomato paste, then the cream, water, mustard and soy. Add the meatballs and simmer 10 min until hot through. Season.",
         "Serve with rice, parsley and pressed cucumber.",
       ],
     },
@@ -197,7 +199,7 @@ export default {
       key: "fri",
       kicker: "Friday 23 Oct",
       title: "Burgers with oven fries",
-      meta: ["35 min", "Anamma formbar färs"],
+      meta: ["35 min", "Anamma formbar vegofärs"],
       tags: [
         { base: "slaw", label: "Red cabbage slaw · ½" },
         { base: "mayo", label: "Smoky mayo" },
@@ -208,7 +210,7 @@ export default {
         { label: "Family cheese" },
       ],
       everyone: [
-        "1 pack Anamma formbar färs, 850 g (to the fridge Thursday night)",
+        "500 g Anamma formbar vegofärs (to the fridge Thursday night)",
         "½ tsp smoked paprika, salt, pepper",
         "800 g potatoes, 2 tbsp oil",
         "4 burger buns (check they're vegan)",
@@ -220,8 +222,8 @@ export default {
       family: ["Cheddar slices (the shared cheese)"],
       steps: [
         "Oven to 225°C. Cut the potatoes into wedges, toss with oil and salt and roast 30 min.",
-        "Season the färs with paprika, salt and pepper. Shape 4 flat patties of about 150 g with oiled hands, and roll the rest into small meatballs.",
-        "Fry the patties 3–4 min on each side until browned and hot through, melting the cheese on top in the last minute. Fry the meatballs after, 8–10 min, and keep them in the fridge for lunches (thawed färs shouldn't go back in the freezer).",
+        "Season the färs with paprika, salt and pepper and shape 4 flat patties with oiled hands.",
+        "Move the last 400 g of färs to the fridge for Saturday. Fry the patties 3–4 min on each side until browned and hot through, melting the cheese on top in the last minute.",
         "Dress the slaw. Toast the buns.",
         "Build: mayo, salad, patty, pickled onion and pressed cucumber, with slaw and fries on the side.",
       ],
@@ -229,7 +231,7 @@ export default {
     {
       key: "sat",
       kicker: "Saturday 24 Oct",
-      title: "Vegofärs tacos",
+      title: "Tacos",
       meta: ["20 min", "Build your own"],
       tags: [
         { base: "slaw", label: "Red cabbage slaw · ½" },
@@ -239,7 +241,7 @@ export default {
         { label: "Family cheese" },
       ],
       everyone: [
-        "500 g Anamma vegofärs straight from the freezer (the rest of the bag)",
+        "400 g Anamma formbar vegofärs (to the fridge Friday night, the last of the packs)",
         "Taco spice: 1 tbsp oil, 2 tsp cumin, 2 tsp smoked paprika, 1 tsp oregano, ½ tsp chilli flakes, 2 tbsp tomato paste, 1 dl water",
         "8–12 soft tortillas",
         "[[slaw|The other ½ of the slaw]] with ½ lime and a splash of oil",
@@ -249,7 +251,7 @@ export default {
       ],
       family: ["Grated cheese (the shared cheese)", "Sour cream or crème fraîche"],
       steps: [
-        "Fry the frozen vegofärs in the oil over high heat, 5–7 min, breaking it up, until browned.",
+        "Fry the färs in the oil over high heat, 5–7 min, breaking it into crumbs, until browned.",
         "Add the spices and tomato paste and fry a minute, then add the water and cook until sticky and coated.",
         "Mash the avocados with lime and salt. Dress the slaw. Warm the tortillas.",
         "Set everything out and let everyone build their own.",
@@ -259,8 +261,8 @@ export default {
 
   source: {
     by: "Anamma's",
-    title: "Vegofärs and Formbar vegofärs",
-    url: "https://www.anamma.eu/produkt/vegofars-1000g/",
+    title: "Formbar vegofärs",
+    url: "https://www.anamma.eu/produkt/formbar-vegofars/",
     note: "with thawing and cooking tips from Anamma's own product guide, for one vegan and a non-vegan family.",
   },
   servings: "Quantities are for 4: 1 vegan and 3 family portions.",
