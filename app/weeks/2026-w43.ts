@@ -6,7 +6,7 @@ export default {
   dates: "Sunday 18 to Saturday 24 October",
   lede: "A plant-based mince week built around Anamma. Vegofärs goes straight from the freezer into the pan, and formbar färs shapes into Friday's burgers once it has thawed. Every dinner has a vegan base for everyone, with add-ons for the family on the side. The coloured tags show where a Sunday base comes back later in the week.",
   reuseNote:
-    "Five bases made on Sunday and five ingredients bought once each show up on several nights. One 1 kg bag of vegofärs covers the ragù and Saturday's tacos, and one 850 g pack of formbar färs makes Friday's burgers plus a batch of meatballs for lunches. The vegokorv pack is split between Wednesday and Thursday.",
+    "Five bases made on Sunday and four ingredients bought once each show up on several nights. One 1 kg bag of vegofärs covers the ragù and Saturday's tacos, and one 850 g pack of formbar färs makes Friday's burgers plus a batch of meatballs for lunches. Half the vegokorv pack goes into Thursday's stroganoff. Tuesday is dinner at Mormor's.",
 
   prep: {
     kicker: "Sunday 18 Oct · about 1 hour",
@@ -21,7 +21,7 @@ export default {
       "Cool everything quickly, then store as below. Then on to the dumplings.",
     ],
     storageNote:
-      "Cooked food keeps 3–4 days in the fridge, so the ragù is eaten by Tuesday. Anamma's frozen färs shouldn't be refrozen once thawed, so only take out what each night needs: vegofärs cooks from frozen, and Friday's formbar färs moves to the fridge on Thursday night.",
+      "Cooked food keeps 3–4 days in the fridge, so the ragù is eaten by Wednesday. Anamma's frozen färs shouldn't be refrozen once thawed, so only take out what each night needs: vegofärs cooks from frozen, and Friday's formbar färs moves to the fridge on Thursday night.",
   },
 
   bases: [
@@ -29,12 +29,12 @@ export default {
       id: "ragu",
       name: "Vegofärs ragù",
       color: "red",
-      used: "Used **Mon** and **Tue**",
+      used: "Used **Mon** and **Wed**",
       ingredients:
         "500 g Anamma vegofärs (frozen) · 2 yellow onions · 2 carrots · 3 garlic cloves · 2 tbsp olive oil · 2 tbsp tomato paste · 2 cans crushed tomatoes (400 g) · 1 vegetable stock cube · 1 dl water · 1 tsp dried oregano · 1 tbsp soy sauce · salt · pepper",
       method:
         "Soften the finely chopped onion, carrot and garlic in the oil, about 5 min. Add the vegofärs straight from the freezer and fry until it breaks up and browns, 5–7 min. Fry in the paste for a minute, then add tomatoes, stock cube, water, oregano and soy. Simmer 25 min and season. Split into 2 containers, both for the fridge.",
-      uses: { mon: "½", tue: "½" },
+      uses: { mon: "½", wed: "½" },
       store: "Fridge, 2 containers",
       moveToFridge: "–",
     },
@@ -42,12 +42,12 @@ export default {
       id: "gurka",
       name: "Pressed cucumber (pressgurka)",
       color: "teal",
-      used: "Used **Wed**, **Thu** and **Fri**",
+      used: "Used **Thu** and **Fri**",
       ingredients:
         "1 cucumber · ½ dl ättika (12%) · ¾ dl sugar · 1½ dl water · ½ tsp salt · a handful of chopped parsley",
       method:
         "Slice the cucumber very thinly. Stir the ättika, sugar, water and salt until the sugar dissolves, pour over and add the parsley. Ready in 30 min and keeps about a week in the fridge.",
-      uses: { wed: true, thu: true, fri: true },
+      uses: { thu: true, fri: true },
       store: "Fridge",
       moveToFridge: "–",
     },
@@ -67,11 +67,11 @@ export default {
       id: "mayo",
       name: "Smoky mayo",
       color: "amber",
-      used: "Used **Wed**, **Fri** and **Sat**",
+      used: "Used **Fri** and **Sat**",
       ingredients:
-        "2½ dl vegan mayo · 1 tsp smoked paprika · 1 small garlic clove, grated · 1 tbsp lime juice · 1 tsp sriracha",
+        "2 dl vegan mayo · 1 tsp smoked paprika · 1 small garlic clove, grated · 1 tbsp lime juice · 1 tsp sriracha",
       method: "Stir together and keep in a jar.",
-      uses: { wed: true, fri: true, sat: true },
+      uses: { fri: true, sat: true },
       store: "Fridge",
       moveToFridge: "–",
     },
@@ -79,23 +79,22 @@ export default {
       id: "onion",
       name: "Pickled red onion",
       color: "magenta",
-      used: "Used **Mon**, **Tue**, **Wed**, **Fri** and **Sat**",
+      used: "Used **Mon**, **Wed**, **Fri** and **Sat**",
       ingredients:
         "1 red onion · 1 dl apple cider vinegar · 1 dl warm water · 1 tsp sugar · ½ tsp salt",
       method:
         "Slice thinly. Stir the vinegar, water, sugar and salt until dissolved, pour over and cover. Keeps about 2 weeks in the fridge.",
-      uses: { mon: true, tue: true, wed: true, fri: true, sat: true },
+      uses: { mon: true, wed: true, fri: true, sat: true },
       store: "Fridge",
       moveToFridge: "–",
     },
   ],
 
   fresh: [
-    { name: "Oat milk & oat cream", uses: { tue: true, thu: true } },
-    { name: "Buns (hot dog & burger)", uses: { wed: true, fri: true } },
-    { name: "Salad leaves & cherry tomatoes", uses: { mon: true, tue: true, fri: true } },
+    { name: "Oat milk & oat cream", uses: { wed: true, thu: true } },
+    { name: "Salad leaves & cherry tomatoes", uses: { mon: true, wed: true, fri: true } },
     { name: "Limes", uses: { fri: true, sat: true } },
-    { name: "Family cheese", uses: { mon: true, tue: true, fri: true, sat: true } },
+    { name: "Family cheese", uses: { mon: true, wed: true, fri: true, sat: true } },
   ],
 
   days: [
@@ -135,6 +134,13 @@ export default {
     {
       key: "tue",
       kicker: "Tuesday 20 Oct",
+      title: "Dinner at Mormor's",
+      out: "Everyone's at Mormor's",
+      meta: ["No cooking tonight"],
+    },
+    {
+      key: "wed",
+      kicker: "Wednesday 21 Oct",
       title: "Vegofärs lasagne",
       meta: ["50 min, 15 hands-on", "Vegan béchamel, cheese on the family's side"],
       tags: [
@@ -160,31 +166,6 @@ export default {
       ],
     },
     {
-      key: "wed",
-      kicker: "Wednesday 21 Oct",
-      title: "Vegokorv hot dogs",
-      meta: ["15 min", "Anamma vegokorv"],
-      tags: [
-        { base: "mayo", label: "Smoky mayo" },
-        { base: "onion", label: "Pickled onion" },
-        { base: "gurka", label: "Pressed cucumber" },
-      ],
-      everyone: [
-        "About 400 g Anamma vegokorv, half the pack",
-        "1 tbsp oil",
-        "8 hot dog buns (check they're vegan)",
-        "[[mayo|Smoky mayo]], [[onion|pickled onion]], [[gurka|pressed cucumber]]",
-        "Mustard, ketchup, crispy fried onions",
-        "Carrot and cucumber sticks on the side",
-      ],
-      family: [{ text: "Optional: regular hot dogs heated in a separate pan", sub: true }],
-      steps: [
-        "Fry the vegokorv in the oil over medium heat, turning, 6–8 min until browned and hot through.",
-        "Warm the buns for a couple of minutes in the oven or in the pan.",
-        "Set out the toppings and let everyone build their own.",
-      ],
-    },
-    {
       key: "thu",
       kicker: "Thursday 22 Oct",
       title: "Vegokorv stroganoff with rice",
@@ -194,7 +175,7 @@ export default {
         { label: "Oat milk & cream" },
       ],
       everyone: [
-        "The other ½ of the vegokorv pack, about 400 g",
+        "400 g Anamma vegokorv, about half the pack (the rest stays frozen)",
         "1 yellow onion · 1 tbsp oil",
         "2 tbsp tomato paste · 2½ dl oat cooking cream · 1 dl water · 1 tbsp Dijon mustard · 1 tsp soy sauce",
         "4 portions rice",
@@ -222,7 +203,6 @@ export default {
         { base: "mayo", label: "Smoky mayo" },
         { base: "onion", label: "Pickled onion" },
         { base: "gurka", label: "Pressed cucumber" },
-        { label: "Buns" },
         { label: "Salad & tomatoes" },
         { label: "Lime" },
         { label: "Family cheese" },
