@@ -4,22 +4,21 @@ export default {
   year: 2026,
   week: 43,
   dates: "Sunday 18 to Saturday 24 October",
-  lede: "A plant-based mince week built around Anamma. Vegofärs goes straight from the freezer into the pan, and formbar färs shapes into meatballs and burgers once it has thawed. Every dinner has a vegan base for everyone, with add-ons for the family on the side. The coloured tags show where a Sunday base comes back later in the week.",
+  lede: "A plant-based mince week built around Anamma. Vegofärs goes straight from the freezer into the pan, and formbar färs shapes into Friday's burgers once it has thawed. Every dinner has a vegan base for everyone, with add-ons for the family on the side. The coloured tags show where a Sunday base comes back later in the week.",
   reuseNote:
-    "Five bases made on Sunday and five ingredients bought once each show up on several nights. One 1 kg bag of vegofärs covers the ragù and Saturday's tacos, and one 850 g pack of formbar färs covers Sunday's meatballs and Friday's burgers. The vegokorv pack is split between Wednesday and Thursday.",
+    "Five bases made on Sunday and five ingredients bought once each show up on several nights. One 1 kg bag of vegofärs covers the ragù and Saturday's tacos, and one 850 g pack of formbar färs makes Friday's burgers plus a batch of meatballs for lunches. The vegokorv pack is split between Wednesday and Thursday.",
 
   prep: {
     kicker: "Sunday 18 Oct · about 1 hour",
     intro:
-      "Everything here is vegan. Do it before Sunday dinner, which uses the meatball färs you take out first and the pressed cucumber straight away.",
+      "Everything here is vegan. Do it on Sunday before the dumplings. Nothing here is used on Sunday itself, so everything goes straight into the fridge.",
     steps: [
-      "Take 450 g formbar färs out of the freezer and spread it on a plate to thaw for tonight's meatballs, 30–60 min. Put the rest of the pack back.",
-      "Chop all onions, carrots and garlic in one go (ragù, meatballs, slaw).",
+      "Chop all onions, carrots and garlic in one go (ragù and slaw).",
       "Start the ragù with 500 g vegofärs straight from the freezer.",
       "While it simmers, make the pressed cucumber and the pickled onion.",
       "Shred the cabbage and carrot for the slaw. Stir together the smoky mayo.",
       "Split the ragù into 2 containers.",
-      "Cool everything quickly, then store as below. Start Sunday dinner.",
+      "Cool everything quickly, then store as below. Then on to the dumplings.",
     ],
     storageNote:
       "Cooked food keeps 3–4 days in the fridge, so the ragù is eaten by Tuesday. Anamma's frozen färs shouldn't be refrozen once thawed, so only take out what each night needs: vegofärs cooks from frozen, and Friday's formbar färs moves to the fridge on Thursday night.",
@@ -43,12 +42,12 @@ export default {
       id: "gurka",
       name: "Pressed cucumber (pressgurka)",
       color: "teal",
-      used: "Used **Sun**, **Wed**, **Thu** and **Fri**",
+      used: "Used **Wed**, **Thu** and **Fri**",
       ingredients:
         "1 cucumber · ½ dl ättika (12%) · ¾ dl sugar · 1½ dl water · ½ tsp salt · a handful of chopped parsley",
       method:
         "Slice the cucumber very thinly. Stir the ättika, sugar, water and salt until the sugar dissolves, pour over and add the parsley. Ready in 30 min and keeps about a week in the fridge.",
-      uses: { sun: true, wed: true, thu: true, fri: true },
+      uses: { wed: true, thu: true, fri: true },
       store: "Fridge",
       moveToFridge: "–",
     },
@@ -92,8 +91,8 @@ export default {
   ],
 
   fresh: [
-    { name: "Potatoes (2 kg bag)", uses: { sun: true, fri: true } },
-    { name: "Oat cooking cream", uses: { sun: true, thu: true } },
+    { name: "Oat milk & oat cream", uses: { tue: true, thu: true } },
+    { name: "Buns (hot dog & burger)", uses: { wed: true, fri: true } },
     { name: "Salad leaves & cherry tomatoes", uses: { mon: true, tue: true, fri: true } },
     { name: "Limes", uses: { fri: true, sat: true } },
     { name: "Family cheese", uses: { mon: true, tue: true, fri: true, sat: true } },
@@ -103,35 +102,9 @@ export default {
     {
       key: "sun",
       kicker: "Sunday 18 Oct",
-      title: "Vegan meatballs with mash, gravy and lingonberries",
-      meta: ["35 min after prep", "Anamma formbar färs"],
-      tags: [
-        { base: "gurka", label: "Pressed cucumber" },
-        { label: "Potatoes" },
-        { label: "Oat cream" },
-      ],
-      everyone: [
-        "450 g Anamma formbar färs, thawed during prep",
-        "½ yellow onion, grated · ½ tsp ground allspice · pepper",
-        "1.2 kg floury potatoes",
-        "Gravy: 2 tbsp oil, 2 tbsp flour, 3 dl vegetable stock, 1 dl oat cooking cream, 1 tbsp soy sauce",
-        "2 tbsp oil for frying",
-        "Lingonberry jam",
-        "[[gurka|Pressed cucumber]]",
-      ],
-      you: ["1 dl oat milk and 1 tbsp vegan butter for your mash"],
-      family: [
-        "1½ dl milk and 2 tbsp butter for their mash",
-        { text: "Optional: 300 g beef meatballs heated in a separate pan", sub: true },
-      ],
-      steps: [
-        "Peel the potatoes and boil about 20 min until soft.",
-        "Mix the thawed färs with the onion, allspice and pepper. It needs no egg or breadcrumbs. Roll into about 24 balls with oiled hands.",
-        "Fry the meatballs in the oil over medium heat, 8–10 min, turning, until browned and hot all the way through. Set aside.",
-        "In the same pan, stir the oil and flour for a minute, whisk in the stock, cream and soy and simmer 3–4 min until thick.",
-        "Drain the potatoes. Mash your share with oat milk and vegan butter, the rest with milk and butter.",
-        "Serve with gravy, lingonberries and pressed cucumber.",
-      ],
+      title: "Dumplings with the leftovers",
+      meta: ["Your own plan tonight"],
+      note: "No recipe from this plan tonight. Do the prep first, then make the dumplings with what's left from last week.",
     },
     {
       key: "mon",
@@ -167,6 +140,7 @@ export default {
       tags: [
         { base: "ragu", label: "Vegofärs ragù · ½" },
         { base: "onion", label: "Pickled onion" },
+        { label: "Oat milk & cream" },
         { label: "Salad & tomatoes" },
         { label: "Family cheese" },
       ],
@@ -217,7 +191,7 @@ export default {
       meta: ["25 min", "Anamma vegokorv"],
       tags: [
         { base: "gurka", label: "Pressed cucumber" },
-        { label: "Oat cream" },
+        { label: "Oat milk & cream" },
       ],
       everyone: [
         "The other ½ of the vegokorv pack, about 400 g",
@@ -231,7 +205,7 @@ export default {
         { text: "Optional: 300 g falukorv in strips, in its own pan with a ladle of the sauce", sub: true },
       ],
       steps: [
-        "Move Friday's formbar färs (the rest of the pack, about 400 g) from the freezer to the fridge.",
+        "Move Friday's formbar färs (the whole pack) from the freezer to the fridge.",
         "Cook the rice. Let the vegokorv sit out 10 min, then cut into strips.",
         "Fry the onion in the oil until soft. Add the korv and fry until it colours, 3–4 min.",
         "Stir in the tomato paste, then the cream, water, mustard and soy. Simmer 5 min and season.",
@@ -248,13 +222,13 @@ export default {
         { base: "mayo", label: "Smoky mayo" },
         { base: "onion", label: "Pickled onion" },
         { base: "gurka", label: "Pressed cucumber" },
-        { label: "Potatoes" },
+        { label: "Buns" },
         { label: "Salad & tomatoes" },
         { label: "Lime" },
         { label: "Family cheese" },
       ],
       everyone: [
-        "About 400 g Anamma formbar färs (to the fridge Thursday night)",
+        "1 pack Anamma formbar färs, 850 g (to the fridge Thursday night)",
         "½ tsp smoked paprika, salt, pepper",
         "800 g potatoes, 2 tbsp oil",
         "4 burger buns (check they're vegan)",
@@ -266,8 +240,8 @@ export default {
       family: ["Cheddar slices (the shared cheese)"],
       steps: [
         "Oven to 225°C. Cut the potatoes into wedges, toss with oil and salt and roast 30 min.",
-        "Season the färs with paprika, salt and pepper and shape 4 flat patties with oiled hands.",
-        "Fry the patties 3–4 min on each side until browned and hot through. Melt the cheese on top in the last minute.",
+        "Season the färs with paprika, salt and pepper. Shape 4 flat patties of about 150 g with oiled hands, and roll the rest into small meatballs.",
+        "Fry the patties 3–4 min on each side until browned and hot through, melting the cheese on top in the last minute. Fry the meatballs after, 8–10 min, and keep them in the fridge for lunches (thawed färs shouldn't go back in the freezer).",
         "Dress the slaw. Toast the buns.",
         "Build: mayo, salad, patty, pickled onion and pressed cucumber, with slaw and fries on the side.",
       ],
